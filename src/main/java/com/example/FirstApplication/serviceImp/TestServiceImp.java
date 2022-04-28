@@ -1,5 +1,6 @@
 package com.example.FirstApplication.serviceImp;
 
+import com.example.FirstApplication.Dto.EmployeeDetails;
 import com.example.FirstApplication.service.TestService;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +23,11 @@ public class TestServiceImp implements TestService {
             return "Data cannot be null";
         }
 
+    }
+
+    @Override
+    public String registerEmployee(EmployeeDetails employeeDetails) {
+        System.out.println(employeeDetails);
+        return null;
     }
 }

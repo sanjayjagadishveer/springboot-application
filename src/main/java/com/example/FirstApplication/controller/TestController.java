@@ -1,11 +1,10 @@
 package com.example.FirstApplication.controller;
 
 
+import com.example.FirstApplication.Dto.EmployeeDetails;
 import com.example.FirstApplication.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TestController {
@@ -67,6 +66,12 @@ public class TestController {
     public String getDetails(@PathVariable String departmentName) {
         String result = service.fetchDepartmentDetails(departmentName);
         return result;
+    }
+
+    @PostMapping("register-details")
+    public String registerDetails(@RequestBody EmployeeDetails employeeDetails)
+    {
+        return service.registerEmployee(employeeDetails);
     }
 
 

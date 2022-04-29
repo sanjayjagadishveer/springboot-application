@@ -11,4 +11,5 @@ public interface TestService {
     String registerEmployee(EmployeeDetails employeeDetails);
 
     String registerNewEmployee(Employee employee);
+
 }

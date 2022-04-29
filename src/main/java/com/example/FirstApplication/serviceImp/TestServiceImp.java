@@ -2,12 +2,10 @@ package com.example.FirstApplication.serviceImp;
 
 import com.example.FirstApplication.Dto.EmployeeDetails;
 import com.example.FirstApplication.entity.Employee;
-import com.example.FirstApplication.practice.EmployeeDAO;
+import com.example.FirstApplication.repository.EmployeeDAO;
 import com.example.FirstApplication.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class TestServiceImp implements TestService {

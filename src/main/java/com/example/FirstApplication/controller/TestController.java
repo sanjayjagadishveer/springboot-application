@@ -2,6 +2,7 @@ package com.example.FirstApplication.controller;
 
 
 import com.example.FirstApplication.Dto.EmployeeDetails;
+import com.example.FirstApplication.entity.Employee;
 import com.example.FirstApplication.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -72,6 +73,12 @@ public class TestController {
     public String registerDetails(@RequestBody EmployeeDetails employeeDetails)
     {
         return service.registerEmployee(employeeDetails);
+    }
+
+    @PostMapping("register-employee")
+    public String registerNewDetails(@RequestBody Employee employee)
+    {
+        return service.registerNewEmployee(employee);
     }
 
 

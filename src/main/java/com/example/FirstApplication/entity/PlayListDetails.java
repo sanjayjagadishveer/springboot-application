@@ -24,7 +24,7 @@ public class PlayListDetails {
     @Column(name = "singer_name")
     private  String singerName;
 
-    @Column(name = "duration")
-    private String duration;
+    @Column(name = "song_duration")
+    private String songDuration;
 
 }

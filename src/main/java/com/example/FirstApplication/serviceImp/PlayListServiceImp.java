@@ -26,7 +26,7 @@ public class PlayListServiceImp implements PlayListService {
 
         playListResponse.setSongName(details.getSongName());
         playListResponse.setSingerName(details.getSingerName());
-        playListResponse.setSongDuration(details.getDuration());
+        playListResponse.setSongDuration(details.getSongDuration());
 
         List<PlayListReview> reviewList = new ArrayList<>();
 
@@ -54,4 +54,35 @@ public class PlayListServiceImp implements PlayListService {
 
         return playListResponse;
     }
+
+    @Override
+    public PlayListResponse getSingerDetails(String singerName) {
+
+        PlayListResponse playListResponse= new PlayListResponse();
+
+        PlayListDetails details= playListDAO.findByName(singerName);
+
+
+        playListResponse.setSongName(details.getSongName());
+        playListResponse.setSingerName(details.getSingerName());
+        playListResponse.setSongDuration(details.getSongDuration());
+
+         return playListResponse;
+    }
+
+    @Override
+    public PlayListResponse getSingerNameAndId(String singerName, int id) {
+        PlayListResponse playListResponse= new PlayListResponse();
+
+        PlayListDetails details= playListDAO.findByNameAndId(singerName,id);
+
+
+        playListResponse.setSongName(details.getSongName());
+        playListResponse.setSingerName(details.getSingerName());
+        playListResponse.setSongDuration(details.getSongDuration());
+
+        return playListResponse;
+    }
+
+
 }
